@@ -20,11 +20,11 @@ Bem-vindo ao meu portfólio de engenharia de dados! Aqui você encontrará vári
 - **Descrição**: Criação de modelos de banco de dados eficientes usando técnicas de normalização e projetando bancos de dados relacionais.
 
 ### 4. Automação de Dutos
-- **Projeto**: [Pipeline de dados com Apache Airflow](./pipeline-automation)
+- **Projeto**: [Pipeline de dados com Apache Airflow](./automacao)
 - **Habilidades**: Fluxo de ar, agendamento de tarefas, orquestração de dados
 - **Descrição**: Automatizando fluxos de trabalho de dados usando o Apache Airflow para orquestrar processos de ETL.
 
 ### 5. Visualização de dados
-- **Projeto**: [Visualização com Power BI](./visualization)
+- **Projeto**: [Visualização com Power BI](./visualizacao)
 - **Habilidades**: Power BI, design de dashboards, relatórios
 - **Descrição**: Criação de dashboards para visualizar insights de dados, com foco em KPIs e métricas de negócios.
