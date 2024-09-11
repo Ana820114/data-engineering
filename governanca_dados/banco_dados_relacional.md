@@ -32,7 +32,7 @@ CREATE TABLE Pedidos (
 );
 ```
 
-# Documentação de Modelos de Dados
+# Modelos de Dados
 
 ## Modelo Conceitual
 
