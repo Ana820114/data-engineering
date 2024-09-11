@@ -1,47 +1,53 @@
-# Arquitetura de Dados Moderna
+# Arquitetura de Dados
 
-A **Arquitetura de Dados Moderna** é um conjunto de práticas e tecnologias projetadas para gerenciar e processar grandes volumes de dados com flexibilidade e eficiência. Ela é adaptada para lidar com a crescente complexidade dos dados e os requisitos de negócios em ambientes digitais. A arquitetura moderna integra vários componentes e tecnologias para oferecer uma solução robusta e escalável para a gestão de dados.
+A Arquitetura de Dados refere-se à estrutura e organização dos dados dentro de uma organização, estabelecendo como eles são coletados, armazenados, processados e utilizados. Envolve a definição de modelos de dados, fluxos de dados, e as tecnologias necessárias para suportar a gestão e análise eficaz dos dados.
 
-## Componentes Principais
+---
 
-### 1. **Data Lake**
-- **Descrição:** Repositório centralizado que armazena dados em seu formato bruto e original. Permite a ingestão de dados estruturados, semiestruturados e não estruturados.
-- **Uso:** Ideal para armazenar grandes volumes de dados diversos, facilitando a análise e a transformação dos dados posteriormente.
+## Modelo de uma Arquitetura
 
-### 2. **Data Warehouse**
-- **Descrição:** Repositório de dados projetado para análise e relatórios. Armazena dados limpos e transformados em um formato estruturado e otimizado para consultas analíticas.
-- **Uso:** Utilizado para gerar relatórios empresariais e realizar análises de dados complexas e históricas.
+Um modelo de arquitetura de dados é um plano que descreve a estrutura e as interações dos sistemas de dados. Ele pode incluir aspectos como:
 
-### 3. **Data Pipeline**
-- **Descrição:** Conjunto de processos e ferramentas para extrair, transformar e carregar (ETL) dados entre diferentes sistemas e camadas.
-- **Uso:** Automatiza a movimentação e transformação de dados, garantindo que os dados estejam disponíveis e prontos para análise.
+- **Camadas de Dados:** Estrutura hierárquica que pode incluir dados brutos, limpos e prontos para análise.
+- **Fluxos de Dados:** Caminhos pelos quais os dados passam desde a coleta até a utilização.
+- **Tecnologias:** Ferramentas e plataformas usadas para armazenar, processar e analisar dados.
 
-### 4. **Data Warehouse em Nuvem**
-- **Descrição:** Versão do Data Warehouse que é hospedada na nuvem, proporcionando escalabilidade e flexibilidade adicionais.
-- **Uso:** Permite análise de dados com menor necessidade de manutenção de hardware e escalabilidade dinâmica conforme a demanda.
+![image](https://github.com/user-attachments/assets/b8b59227-4f59-49c5-b427-e75c12499e64)
 
-### 5. **Data Mesh**
-- **Descrição:** Arquitetura descentralizada que promove a responsabilidade de domínio de dados, onde cada equipe é responsável por seu próprio domínio de dados.
-- **Uso:** Melhora a escalabilidade e a governança dos dados em grandes organizações, facilitando o acesso e a análise de dados em diferentes departamentos.
 
-### 6. **Data Catalog**
-- **Descrição:** Ferramenta que fornece uma visão geral e uma interface para explorar e gerenciar os dados disponíveis em um sistema.
-- **Uso:** Ajuda na descoberta de dados, garantindo que os usuários possam encontrar e entender os dados relevantes para suas análises.
+## Arquitetura de Dados Moderna
 
-## Considerações Importantes
+A Arquitetura de Dados Moderna é uma abordagem avançada que integra várias tecnologias e práticas para otimizar a gestão e análise de dados. Ela se caracteriza por:
 
-- **Escalabilidade:** A arquitetura moderna deve suportar a adição de novos recursos e capacidade conforme a demanda de dados cresce.
-- **Segurança:** Implementa controles de acesso, criptografia e políticas de privacidade para proteger dados sensíveis e garantir conformidade.
-- **Governança de Dados:** Estabelece práticas e políticas para garantir a qualidade, integridade e uso apropriado dos dados.
-- **Performance:** Deve ser otimizada para garantir que as consultas e análises sejam realizadas de maneira eficiente e oportuna.
+- **Data Lakes:** Armazenamento de grandes volumes de dados brutos e estruturados.
+- **Data Warehouses:** Armazenamento de dados organizados para análise e relatórios.
+- **Data Platforms:** Plataformas que suportam integração, processamento e análise de dados.
+- **Serviços de Nuvem:** Utilização de serviços de nuvem para escalabilidade e flexibilidade.
 
-## Referências e Documentação
+![image](https://github.com/user-attachments/assets/b3f37dea-2bf4-4d32-8bc8-7096ebb4d6e1)
 
-- [Data Lake Overview](https://aws.amazon.com/big-data/data-lake/)
-- [Data Warehouse Concepts](https://www.microsoft.com/en-us/sql-server/sql-server-2019-data-warehouse)
-- [Data Pipeline Tools](https://airflow.apache.org/)
-- [Data Mesh Principles](https://martinfowler.com/articles/data-monoliths.html)
-- [Data Catalog Solutions](https://www.alation.com/)
+**Fontes:**
+- [Sonra.io - The Ultimate Guide to Architecting Data Warehouse, Data Lakehouse, and Data Management Platforms](https://sonra.io/data-warehouse/reference-enterprise-data-architecture-the-ultimate-guide-to-architecting-data-warehouse-date-lakehouse-and-data-management-platforms/)
+- [Adatis - The Common Data Model in Azure Data Lake Storage](https://adatis.co.uk/the-common-data-model-in-azure-data-lake-storage-azure-data-services-data-factory-data-flow/)
 
-A Arquitetura de Dados Moderna integra essas tecnologias e práticas para construir uma base sólida para a análise e o gerenciamento de dados em ambientes dinâmicos e em rápida evolução.
+---
 
+## Arquitetura de Dados Moderna – 6 Camadas
+
+A Arquitetura de Dados Moderna pode ser dividida em seis camadas, cada uma com uma função específica:
+
+1. **Camada de Ingestão:** Coleta de dados de várias fontes.
+2. **Camada de Armazenamento:** Armazenamento de dados em formatos brutos e estruturados.
+3. **Camada de Processamento:** Transformação e processamento dos dados.
+4. **Camada de Integração:** Integração de dados de diferentes fontes.
+5. **Camada de Análise:** Análise e geração de insights a partir dos dados.
+6. **Camada de Consumo:** Disponibilização dos dados para usuários finais e sistemas de relatórios.
+   
+![image](https://github.com/user-attachments/assets/8305730e-c9ef-48d0-8de4-26530e16e0ea)
+![image](https://github.com/user-attachments/assets/850fde0b-e3aa-4c0a-940b-ac12a74d7e1b)
+
+
+**Fonte:**
+- [Monte Carlo Data - What is a Data Platform and How to Build One](https://www.montecarlodata.com/blog-what-is-a-data-platform-and-how-to-build-one/)
+
+---
