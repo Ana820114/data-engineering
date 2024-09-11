@@ -1,3 +1,4 @@
+# Modelos de Dados
 
 ## Banco de Dados Relacional
 
@@ -17,22 +18,52 @@ Os Bancos de Dados Relacionais (RDBMS) são projetados para armazenar dados de f
 
 ### Exemplos
 
-```sql
-CREATE TABLE Clientes (
-    ClienteID INT PRIMARY KEY,
-    Nome VARCHAR(100),
-    Email VARCHAR(100)
-);
+![Exemplo de Banco de Dados Relacional](https://github.com/user-attachments/assets/d0f7f36e-dc7d-4cc2-809d-3bbad6aafa69)
 
-CREATE TABLE Pedidos (
-    PedidoID INT PRIMARY KEY,
-    ClienteID INT,
-    Data DATE,
-    FOREIGN KEY (ClienteID) REFERENCES Clientes(ClienteID)
-);
-```
+## Modelo Dimensional
 
-# Modelos de Dados
+O Modelo Dimensional é uma abordagem utilizada para projetar bancos de dados que suportam sistemas de Business Intelligence (BI) e Data Warehousing. Ele é projetado para otimizar a consulta e a análise de grandes volumes de dados, proporcionando uma estrutura que facilita a compreensão e o uso dos dados para análises e relatórios.
+
+### Descrição
+
+O Modelo Dimensional organiza dados em uma estrutura que facilita a análise rápida e eficiente. Ele é baseado em duas principais entidades:
+
+- **Fatos**: Tabelas que armazenam dados quantitativos e métricas sobre eventos ou transações. Estas tabelas contêm medidas que são analisadas, como vendas, lucros ou quantidade de produtos vendidos.
+- **Dimensões**: Tabelas que contêm atributos descritivos relacionados às tabelas de fatos. As dimensões ajudam a categorizar e a fornecer contexto para as medidas. Exemplos incluem tempo, local, produto e cliente.
+
+### Componentes Principais
+
+#### Tabelas de Fato
+
+- **Definição**: Contêm as métricas e medidas numéricas associadas a eventos ou transações. Exemplos incluem tabelas de vendas, transações financeiras ou desempenho de marketing.
+- **Características**: Normalmente têm muitas linhas e são agregadas para fornecer resumo e análise.
+
+#### Tabelas de Dimensão
+
+- **Definição**: Contêm atributos descritivos sobre as dimensões de negócios. Exemplos incluem tabelas de clientes, produtos ou datas.
+- **Características**: Normalmente têm menos linhas em comparação com as tabelas de fatos e são usadas para descrever e categorizar os dados.
+
+### Esquemas de Modelagem
+
+- **Esquema em Estrela**: Consiste em uma tabela de fatos central conectada a várias tabelas de dimensões. O modelo é simples e fácil de entender, ideal para consultas rápidas e eficientes.
+  
+  ![Esquema em Estrela](https://example.com/estrela.png)  <!-- Substitua o link da imagem por um válido ou remova esta linha -->
+
+- **Esquema em Floco de Neve**: Uma variação do esquema em estrela onde as tabelas de dimensões são normalizadas. Isso pode reduzir redundâncias e melhorar a integridade dos dados, mas pode tornar as consultas mais complexas.
+
+  ![Esquema em Floco de Neve](https://example.com/floco.png)  <!-- Substitua o link da imagem por um válido ou remova esta linha -->
+
+### Benefícios
+
+- **Facilidade de Uso**: Os modelos dimensionais são projetados para serem intuitivos, facilitando a criação de relatórios e análises complexas.
+- **Desempenho de Consulta**: Otimiza o desempenho das consultas analíticas e relatórios devido à estrutura simplificada das tabelas de fatos e dimensões.
+- **Escalabilidade**: Suporta grandes volumes de dados e permite a adição de novas dimensões e fatos conforme necessário.
+
+### Referência
+
+Para mais informações, consulte a [Documentação do Modelo Dimensional - Visual Paradigm](https://www.visual-paradigm.com/support/documents/vpuserguide/3563/3564/85378_conceptual,l.html).
+
+![Imagem do Modelo Dimensional](https://github.com/user-attachments/assets/7df52494-f19c-43f0-a8a6-1d9755fbcf06)
 
 ## Modelo Conceitual
 
