@@ -51,3 +51,69 @@ Os Bancos de Dados Relacionais (RDBMS) são projetados para armazenar dados de f
 - [NoSQL Tutorial - Guru99](https://www.guru99.com/nosql-tutorial.html)
 - [Comparação entre Bancos de Dados Relacionais e NoSQL - OpenClassrooms](https://openclassrooms.com/en/courses/5671741-design-the-logical-model-of-your-relational-database/6255746-compare-relational-and-nosql-databases)
 - [Bancos de Dados NoSQL - FileCloud](https://www.filecloud.com/blog/2014/08/leading-nosql-databases-to-consider/)
+
+# Modelos de Banco de Dados NoSQL
+
+## Introdução
+Os bancos de dados NoSQL são projetados para lidar com grandes volumes de dados e oferecer flexibilidade além dos modelos relacionais tradicionais. Eles se dividem em quatro categorias principais:
+
+1. **Chave-Valor (Key-Value)**
+2. **Orientado a Grafos**
+3. **Orientado a Colunas (Column Family)**
+4. **Orientado a Documentos**
+
+## Modelos de NoSQL
+
+### 1. Chave-Valor (Key-Value)
+- **Descrição**: O modelo mais simples de banco de dados NoSQL. Visualiza-se o banco como uma grande tabela, onde cada item é identificado por uma chave única e associado a um valor.
+- **Características**:
+  - Cada entrada é composta por uma chave e um valor.
+  - Simples e eficiente para operações de leitura e escrita rápidas.
+  - Ideal para cache e sessões.
+
+### 2. Orientado a Grafos
+- **Descrição**: Este modelo é projetado para representar e consultar dados com relações complexas. Consiste em nós (vértices), relacionamentos (arestas) e propriedades (atributos).
+- **Características**:
+  - **Nós (Vértices)**: Entidades ou objetos.
+  - **Relacionamentos (Arestas)**: Conexões entre os nós.
+  - **Propriedades**: Atributos que descrevem nós e relacionamentos.
+  - Utilizado para consultas complexas, como redes sociais e sistemas de recomendação.
+- **Exemplo de Uso**: Aplicações que precisam consultar conexões entre entidades, como "Quais cidades foram visitadas anteriormente por pessoas que foram para Nova Iorque?"
+
+### 3. Orientado a Colunas (Column Family)
+- **Descrição**: Projetado para armazenar e processar grandes quantidades de dados distribuídos em várias máquinas. As colunas são organizadas em famílias e são indexadas por uma tripla (coluna, linha e timestamp).
+- **Características**:
+  - Dados armazenados em colunas em vez de linhas.
+  - Permite o armazenamento de múltiplas versões de um dado através do uso de timestamps.
+  - Ideal para grandes volumes de dados e consultas de leitura rápida.
+- **Exemplo de Uso**: Modelagem de dados onde diferentes atributos de um item (como endereço e cidade) são armazenados em diferentes famílias de colunas.
+
+### 4. Orientado a Documentos
+- **Descrição**: Armazena dados em documentos estruturados e indexados, geralmente no formato JSON. Esses documentos podem conter dados complexos e hierárquicos.
+- **Características**:
+  - **JSON (JavaScript Object Notation)**: Formato compacto e legível por humanos, utilizado para troca de dados.
+  - Permite consultas detalhadas em documentos e manipulação flexível de dados.
+  - Ideal para aplicações que requerem uma estrutura de dados dinâmica e hierárquica.
+- **Exemplo de Uso**: Armazenamento de dados de usuários em um formato JSON com atributos e metadados associados.
+
+### JSON
+- **Descrição**: JSON (JavaScript Object Notation) é um formato de troca de dados leve e fácil de ler e escrever por humanos. Utiliza um formato de atributo-valor e é independente de linguagem.
+- **Características**:
+  - **Formato**: Texto legível por humanos.
+  - **Utilização**: Troca de dados entre sistemas e armazenamento de dados estruturados.
+
+### MongoDB
+- **Descrição**: MongoDB é um banco de dados NoSQL orientado a documentos que utiliza JSON para armazenar dados.
+- **Características**:
+  - **Open Source**: Disponível como software livre.
+  - **Multiplataforma**: Funciona em diferentes sistemas operacionais.
+  - **Escalável**: Suporta alta escalabilidade e desempenho.
+  - **Orientado a Documentos**: Armazena dados em formato JSON e suporta documentos aninhados.
+  - **Indexado**: Permite a busca eficiente através do conteúdo dos documentos.
+  - **Sem Esquema Fixo**: Flexível quanto à estrutura dos dados.
+  - **Sem Integridade Referencial**: Não mantém relacionamentos entre documentos como um banco de dados relacional.
+
+## Referências
+- [Guru99 - NoSQL Tutorial](https://www.guru99.com/nosql-tutorial.html)
+- [Neo4j - Why NoSQL Databases?](https://neo4j.com/blog/why-nosql-databases/)
+- [MongoDB - Aplicações .NET](http://netcoders.com.br/mongodb-aplicacoes-dotnet/)
