@@ -1,4 +1,3 @@
-# Documentação de Modelagem e Normalização de Dados
 
 ## Banco de Dados Relacional
 
