@@ -117,3 +117,51 @@ Os bancos de dados NoSQL são projetados para lidar com grandes volumes de dados
 - [Guru99 - NoSQL Tutorial](https://www.guru99.com/nosql-tutorial.html)
 - [Neo4j - Why NoSQL Databases?](https://neo4j.com/blog/why-nosql-databases/)
 - [MongoDB - Aplicações .NET](http://netcoders.com.br/mongodb-aplicacoes-dotnet/)
+
+# Arquitetura Banco de Dados NoSQL
+
+## 1. Arquitetura MongoDB
+
+### Sharding e Replica Set
+
+A arquitetura do MongoDB utiliza dois conceitos importantes para garantir escalabilidade e alta disponibilidade: **Sharding** e **Replica Set**.
+
+#### Sharding
+- **Sharding** é a técnica de **escalabilidade horizontal** que divide grandes conjuntos de dados em **shards**, que são distribuídos entre diferentes servidores.
+- Cada **shard** é um banco de dados independente, mas coletivamente, os shards formam um único banco de dados lógico. Um banco pode conter uma mistura de **coleções fragmentadas** e **não fragmentadas**.
+- As coleções fragmentadas são distribuídas entre os shards, enquanto as não fragmentadas permanecem em um **shard primário**.
+
+Referência: [Sharding MongoDB](https://www.mongodb.com/docs/v2.6/core/sharding-introduction/)
+
+#### Replica Set
+- Um **Replica Set** é um grupo de instâncias MongoDB que mantém o mesmo conjunto de dados, proporcionando **alta disponibilidade**.
+- O **nó primário** é responsável por todas as operações de escrita e mantém um log de operações (oplog). Os **nós secundários** replicam essas operações de forma assíncrona.
+- Em caso de falha do primário, um secundário pode se eleger como o novo nó primário, garantindo a continuidade da operação.
+
+Referência: [Replica Set MongoDB](https://www.mongodb.com/docs/manual/replication/)
+
+## 2. Teorema CAP
+
+De acordo com o **Teorema CAP**, um sistema distribuído pode garantir somente **dois** dos três aspectos simultaneamente:
+- **Consistência**
+- **Disponibilidade**
+- **Tolerância à Partição**
+
+Em um banco de dados distribuído, você deve escolher entre consistência ou disponibilidade, pois a **tolerância à partição** é inevitável. A decisão depende dos requisitos do sistema.
+
+Referência: [CAP Theorem](https://www.yugabyte.com/blog/tag/cap-theorem/)
+
+## 3. Consistência Eventual
+
+O conceito de **Consistência Eventual** surge do Teorema CAP, onde o sistema prioriza a **disponibilidade** e o **armazenamento rápido** de dados. A consistência entre os nós é garantida após um período de tempo, resultando em um estado temporário de inconsistência. Esse modelo é amplamente utilizado por sistemas como **MongoDB**, **Cassandra**, e **RavenDB**.
+
+Referência: [Consistência Eventual](https://www.nexsoftsys.com/articles/CAP-theorem-database-dbms.html)
+
+## 4. Escalabilidade Horizontal
+
+Com o aumento de volume de dados, surge a necessidade de melhorar o desempenho através da **escalabilidade**. Existem duas formas de escalar:
+- **Escalabilidade Vertical**: adicionar mais recursos (CPU, memória) em um único servidor.
+- **Escalabilidade Horizontal**: adicionar mais servidores (nós) para distribuir a carga de trabalho, como ocorre com o **Sharding** no MongoDB.
+
+Referência: [Escalabilidade](https://blog.router-switch.com/2021/03/what-is-the-difference-between-scale-up-and-scale-out/)
+
