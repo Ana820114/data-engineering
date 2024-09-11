@@ -30,7 +30,7 @@ CREATE TABLE Pedidos (
     Data DATE,
     FOREIGN KEY (ClienteID) REFERENCES Clientes(ClienteID)
 );
-
+```
 
 # Documentação de Modelos de Dados
 
