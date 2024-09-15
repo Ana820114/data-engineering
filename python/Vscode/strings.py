@@ -42,17 +42,18 @@ print(f"Olá, me chamo {nome}. Eu tenho {idade} anos de idade, trabalho como {pr
 # fatiamento 
 
 nome = "Guilherme Arthur de Carvalho"
+print(nome[0])
+print(nome[:9])
+print(nome[10:])
+print(nome[10:16])
+print(nome[10:16:2])
+print(nome[:])
+print(nome[ :: -1])
 
-nome[0]
+# string triplas
 
-nome[:9]
+nome = "Guilherme"
 
-nome[10:]
+mensagem = f""" Olá meu nome é {nome}, Eu estou aprendendo Python """
 
-nome[10:16]
-
-nome[10:16:2]
-
-nome[:]
-
-nome[ :: -1]
+print(mensagem)
